@@ -21,6 +21,6 @@ describe("arrowGetFullName()", function () {
   });
 
   it("should be an arrow function", function () {
-    expect(typeof arrowGetFullName.prototype).to.equal("undefined");
-  });
+    const isArrowFn = (fn) => (typeof fn === 'function') && /^[^{]+?=>/.test(fn.toString());
+    assert.equal(isArrowFn(arrowGetFullName), true)  });
 });

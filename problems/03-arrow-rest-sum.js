@@ -1,6 +1,7 @@
 /***********************************************************************
 Write a function named `arrowRestSum` that accepts all incoming parameters
-and sums them. Assign the below function to a variable using the const keyword.
+and sums them. Assign the function to a variable using the const keyword and
+arrow function syntax.
 
 **Hint**: Use rest parameter syntax!
 

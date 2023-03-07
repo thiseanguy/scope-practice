@@ -22,6 +22,6 @@ describe("reverseStr()", function () {
   });
 
   it("should be an arrow function", function () {
-    expect(typeof reverseStr.prototype).to.equal("undefined");
-  });
+    const isArrowFn = (fn) => (typeof fn === 'function') && /^[^{]+?=>/.test(fn.toString());
+    assert.equal(isArrowFn(reverseStr), true)  });
 });

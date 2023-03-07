@@ -14,6 +14,6 @@ describe("arrowAvgValue()", function () {
   });
 
   it("should be an arrow function", function () {
-    expect(typeof arrowAvgValue.prototype).to.equal("undefined");
-  });
+    const isArrowFn = (fn) => (typeof fn === 'function') && /^[^{]+?=>/.test(fn.toString());
+    assert.equal(isArrowFn(arrowAvgValue), true)  });
 });

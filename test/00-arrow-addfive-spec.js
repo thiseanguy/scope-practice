@@ -23,6 +23,7 @@ describe("addFive()", function () {
   });
 
   it("should be an arrow function", function () {
-    expect(typeof addFive.prototype).to.equal("undefined");
+    const isArrowFn = (fn) => (typeof fn === 'function') && /^[^{]+?=>/.test(fn.toString());
+    assert.equal(isArrowFn(addFive), true)
   });
 });

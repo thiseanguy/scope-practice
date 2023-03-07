@@ -18,8 +18,8 @@ describe("arrowMyMap()", function () {
   });
 
   it("should be an arrow function", function () {
-    expect(typeof arrowMyMap.prototype).to.equal("undefined");
-  });
+    const isArrowFn = (fn) => (typeof fn === 'function') && /^[^{]+?=>/.test(fn.toString());
+    assert.equal(isArrowFn(arrowMyMap), true)  });
 
   it("should not call the built in Array#map", function () {
     const mapSpy = chai.spy.on(Array.prototype, "map");
